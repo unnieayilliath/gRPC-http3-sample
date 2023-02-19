@@ -297,11 +297,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Code Repo\\HTTP3\\gRPC-HTTP3\\gRPC-HTTP3-Client\\gRPC-HTTP3-Client\\gRPC-HTTP3-Client.csproj",
+      "projectUniqueName": "C:\\Code Repo\\HTTP3\\gRPC-HTTP3\\gRPC-http3-sample\\gRPC-HTTP3-Client\\gRPC-HTTP3-Client\\gRPC-HTTP3-Client.csproj",
       "projectName": "gRPC-HTTP3-Client",
-      "projectPath": "C:\\Code Repo\\HTTP3\\gRPC-HTTP3\\gRPC-HTTP3-Client\\gRPC-HTTP3-Client\\gRPC-HTTP3-Client.csproj",
+      "projectPath": "C:\\Code Repo\\HTTP3\\gRPC-HTTP3\\gRPC-http3-sample\\gRPC-HTTP3-Client\\gRPC-HTTP3-Client\\gRPC-HTTP3-Client.csproj",
       "packagesPath": "C:\\Users\\uayilliath\\.nuget\\packages\\",
-      "outputPath": "C:\\Code Repo\\HTTP3\\gRPC-HTTP3\\gRPC-HTTP3-Client\\gRPC-HTTP3-Client\\obj\\",
+      "outputPath": "C:\\Code Repo\\HTTP3\\gRPC-HTTP3\\gRPC-http3-sample\\gRPC-HTTP3-Client\\gRPC-HTTP3-Client\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\uayilliath\\AppData\\Roaming\\NuGet\\NuGet.Config",

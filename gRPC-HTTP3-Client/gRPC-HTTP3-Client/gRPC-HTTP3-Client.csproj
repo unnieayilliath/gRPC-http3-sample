@@ -6,6 +6,8 @@
     <RootNamespace>gRPC_HTTP3_Client</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+	  <!--Uncomment below line if you are using .NET 6.0-->
+	  <!--<EnablePreviewFeatures>True</EnablePreviewFeatures>-->
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,4 +21,8 @@
 	<ItemGroup>
 		<Protobuf Include="Protos\greet.proto" GrpcServices="Client" />
 	</ItemGroup>
+	<!--Uncomment below line if you are using .NET 6.0-->
+	<!--<ItemGroup>
+		<RuntimeHostConfigurationOption Include="System.Net.SocketsHttpHandler.Http3Support" Value="true" />
+	</ItemGroup>-->
 </Project>

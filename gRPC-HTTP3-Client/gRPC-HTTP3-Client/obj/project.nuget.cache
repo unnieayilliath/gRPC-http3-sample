@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pzs/8cKhjFbtaISztufeM5KnB5f4T9Qwa7th1XXLmlbmjDR6TREAdOtf+gF5YcYMjZnnOmeGYLqPalAmk5pcig==",
+  "dgSpecHash": "5bOrfrcme1f0JQnoZFQASTRseSuhU7x9DQCKFaeIm4q3v8oUv6z1gdY+ZsBq04QgyP9QafCiR6V3hwyrLGbykw==",
   "success": true,
-  "projectFilePath": "C:\\Code Repo\\HTTP3\\gRPC-HTTP3\\gRPC-HTTP3-Client\\gRPC-HTTP3-Client\\gRPC-HTTP3-Client.csproj",
+  "projectFilePath": "C:\\Code Repo\\HTTP3\\gRPC-HTTP3\\gRPC-http3-sample\\gRPC-HTTP3-Client\\gRPC-HTTP3-Client\\gRPC-HTTP3-Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\uayilliath\\.nuget\\packages\\google.protobuf\\3.22.0\\google.protobuf.3.22.0.nupkg.sha512",
     "C:\\Users\\uayilliath\\.nuget\\packages\\grpc.core.api\\2.51.0\\grpc.core.api.2.51.0.nupkg.sha512",

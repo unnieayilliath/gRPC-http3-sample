@@ -4,6 +4,8 @@
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+	  <!--Uncomment below line if you are using .NET 6.0-->
+	 <!--<EnablePreviewFeatures>True</EnablePreviewFeatures>-->
   </PropertyGroup>
 
   <ItemGroup>

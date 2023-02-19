@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Code Repo\\HTTP3\\gRPC-HTTP3\\gRPC-HTTP3-Service\\gRPC-HTTP3-Service\\gRPC-HTTP3-Service.csproj": {}
+    "C:\\Code Repo\\HTTP3\\gRPC-HTTP3\\gRPC-http3-sample\\gRPC-HTTP3-Service\\gRPC-HTTP3-Service\\gRPC-HTTP3-Service.csproj": {}
   },
   "projects": {
-    "C:\\Code Repo\\HTTP3\\gRPC-HTTP3\\gRPC-HTTP3-Service\\gRPC-HTTP3-Service\\gRPC-HTTP3-Service.csproj": {
+    "C:\\Code Repo\\HTTP3\\gRPC-HTTP3\\gRPC-http3-sample\\gRPC-HTTP3-Service\\gRPC-HTTP3-Service\\gRPC-HTTP3-Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Code Repo\\HTTP3\\gRPC-HTTP3\\gRPC-HTTP3-Service\\gRPC-HTTP3-Service\\gRPC-HTTP3-Service.csproj",
+        "projectUniqueName": "C:\\Code Repo\\HTTP3\\gRPC-HTTP3\\gRPC-http3-sample\\gRPC-HTTP3-Service\\gRPC-HTTP3-Service\\gRPC-HTTP3-Service.csproj",
         "projectName": "gRPC-HTTP3-Service",
-        "projectPath": "C:\\Code Repo\\HTTP3\\gRPC-HTTP3\\gRPC-HTTP3-Service\\gRPC-HTTP3-Service\\gRPC-HTTP3-Service.csproj",
+        "projectPath": "C:\\Code Repo\\HTTP3\\gRPC-HTTP3\\gRPC-http3-sample\\gRPC-HTTP3-Service\\gRPC-HTTP3-Service\\gRPC-HTTP3-Service.csproj",
         "packagesPath": "C:\\Users\\uayilliath\\.nuget\\packages\\",
-        "outputPath": "C:\\Code Repo\\HTTP3\\gRPC-HTTP3\\gRPC-HTTP3-Service\\gRPC-HTTP3-Service\\obj\\",
+        "outputPath": "C:\\Code Repo\\HTTP3\\gRPC-HTTP3\\gRPC-http3-sample\\gRPC-HTTP3-Service\\gRPC-HTTP3-Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\uayilliath\\AppData\\Roaming\\NuGet\\NuGet.Config",
