@@ -1,0 +1,79 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Code Repo\\HTTP3\\gRPC-HTTP3\\gRPC-HTTP3-Client\\gRPC-HTTP3-Client\\gRPC-HTTP3-Client.csproj": {}
+  },
+  "projects": {
+    "C:\\Code Repo\\HTTP3\\gRPC-HTTP3\\gRPC-HTTP3-Client\\gRPC-HTTP3-Client\\gRPC-HTTP3-Client.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Code Repo\\HTTP3\\gRPC-HTTP3\\gRPC-HTTP3-Client\\gRPC-HTTP3-Client\\gRPC-HTTP3-Client.csproj",
+        "projectName": "gRPC-HTTP3-Client",
+        "projectPath": "C:\\Code Repo\\HTTP3\\gRPC-HTTP3\\gRPC-HTTP3-Client\\gRPC-HTTP3-Client\\gRPC-HTTP3-Client.csproj",
+        "packagesPath": "C:\\Users\\uayilliath\\.nuget\\packages\\",
+        "outputPath": "C:\\Code Repo\\HTTP3\\gRPC-HTTP3\\gRPC-HTTP3-Client\\gRPC-HTTP3-Client\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\uayilliath\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Google.Protobuf": {
+              "target": "Package",
+              "version": "[3.22.0, )"
+            },
+            "Grpc.Net.Client": {
+              "target": "Package",
+              "version": "[2.51.0, )"
+            },
+            "Grpc.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.51.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

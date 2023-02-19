@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\gRPC-HTTP3-Service.props" />
+</Project>

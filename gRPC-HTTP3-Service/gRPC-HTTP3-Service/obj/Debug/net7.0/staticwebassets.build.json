@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "L20TrNiQBqj85LjewYOwO8nxRjIONJ0TqXcUsV1ykhE=",
+  "Source": "gRPC-HTTP3-Service",
+  "BasePath": "_content/gRPC-HTTP3-Service",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
