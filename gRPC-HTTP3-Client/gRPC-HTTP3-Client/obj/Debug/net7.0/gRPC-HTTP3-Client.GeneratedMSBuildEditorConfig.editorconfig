@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = gRPC_HTTP3_Client
-build_property.ProjectDir = c:\Code Repo\HTTP3\gRPC-HTTP3\gRPC-http3-sample\gRPC-HTTP3-Client\gRPC-HTTP3-Client\
+build_property.ProjectDir = C:\Code Repo\HTTP3\gRPC-HTTP3\gRPC-http3-sample\gRPC-HTTP3-Client\gRPC-HTTP3-Client\

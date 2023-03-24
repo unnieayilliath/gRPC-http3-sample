@@ -14,11 +14,11 @@ httpClient.DefaultVersionPolicy = HttpVersionPolicy.RequestVersionExact;
 
 // The port number must match the port of the gRPC server.Pass the httpClient while creating gRPC connection
 using var channel = GrpcChannel.ForAddress("https://localhost:5001", new GrpcChannelOptions { HttpClient = httpClient });
-var client = new Greeter.GreeterClient(channel);
+var client = new Message.MessageClient(channel);
 // send 10 messages to the server
 for (int i = 0;i < 10; i++)
 {
-    var reply = await client.SayHelloAsync(new HelloRequest { Name = "GreeterClient" });
+    var reply = await client.SendAsync(new RequestMessage { Message = "GreeterClient" });
     Console.WriteLine("Greeting: " + reply.Message);
 }
 Console.WriteLine("Press any key to exit...");

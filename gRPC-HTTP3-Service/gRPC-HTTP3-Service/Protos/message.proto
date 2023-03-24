@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option csharp_namespace = "gRPC_HTTP3_Service";
+
+package message;
+
+// The message service definition
+service Message {
+  // Sends a greeting
+  rpc Send (RequestMessage) returns (MessageReply);
+}
+
+// The request message containing the user's name.
+message RequestMessage {
+  string message = 1;
+}
+
+// The response message containing the greetings.
+message MessageReply {
+  string message = 1;
+}
