@@ -7,10 +7,9 @@ var httpHandler = new HttpClientHandler();
 //ignore certificate validations
 httpHandler.ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator;
 var httpClient = new HttpClient(httpHandler);
-/* //Uncomment below code if you are using .NET 6.0
- httpClient.DefaultRequestVersion = HttpVersion.Version30;
+httpClient.DefaultRequestVersion = HttpVersion.Version30;
 httpClient.DefaultVersionPolicy = HttpVersionPolicy.RequestVersionExact;
-*/
+
 
 // The port number must match the port of the gRPC server.Pass the httpClient while creating gRPC connection
 using var channel = GrpcChannel.ForAddress("https://localhost:5001", new GrpcChannelOptions { HttpClient = httpClient });
