@@ -1,3 +1,4 @@
+using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using gRPC_HTTP3_Service;
 
@@ -15,7 +16,7 @@ namespace gRPC_HTTP3_Service.Services
         {
             return Task.FromResult(new MessageReply
             {
-                Message = "Hello " + request.Message
+                ReceivedTime = DateTime.UtcNow.ToTimestamp()
             });
         }
     }

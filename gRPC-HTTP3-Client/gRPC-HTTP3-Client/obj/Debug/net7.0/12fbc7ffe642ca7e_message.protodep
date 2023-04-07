@@ -1,2 +1,3 @@
 obj\Debug\net7.0\Protos/Message.cs \
-obj\Debug\net7.0\Protos/MessageGrpc.cs: Protos/message.proto
+obj\Debug\net7.0\Protos/MessageGrpc.cs: C:/Users/uayilliath/.nuget/packages/grpc.tools/2.51.0/build/native/include/google/protobuf/timestamp.proto\
+ Protos/message.proto

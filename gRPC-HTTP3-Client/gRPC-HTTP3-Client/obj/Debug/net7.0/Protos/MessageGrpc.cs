@@ -95,7 +95,7 @@ namespace gRPC_HTTP3_Client {
       }
 
       /// <summary>
-      /// Sends a greeting
+      /// Sends a message
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -108,7 +108,7 @@ namespace gRPC_HTTP3_Client {
         return Send(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Sends a greeting
+      /// Sends a message
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -119,7 +119,7 @@ namespace gRPC_HTTP3_Client {
         return CallInvoker.BlockingUnaryCall(__Method_Send, null, options, request);
       }
       /// <summary>
-      /// Sends a greeting
+      /// Sends a message
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -132,7 +132,7 @@ namespace gRPC_HTTP3_Client {
         return SendAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Sends a greeting
+      /// Sends a message
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

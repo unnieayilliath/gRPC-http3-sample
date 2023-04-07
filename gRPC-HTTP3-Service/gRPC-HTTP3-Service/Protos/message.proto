@@ -1,6 +1,7 @@
 syntax = "proto3";
 
 option csharp_namespace = "gRPC_HTTP3_Service";
+import "google/protobuf/timestamp.proto";
 
 package message;
 
@@ -12,10 +13,11 @@ service Message {
 
 // The request message containing the user's name.
 message RequestMessage {
-  string message = 1;
+  string _data = 1;
+  google.protobuf.Timestamp _sendTime=2;
 }
 
 // The response message containing the greetings.
 message MessageReply {
-  string message = 1;
+  google.protobuf.Timestamp _receivedTime=1;
 }

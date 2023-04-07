@@ -24,25 +24,24 @@ namespace gRPC_HTTP3_Client {
     static MessageReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRQcm90b3MvbWVzc2FnZS5wcm90bxIHbWVzc2FnZSIhCg5SZXF1ZXN0TWVz",
-            "c2FnZRIPCgdtZXNzYWdlGAEgASgJIh8KDE1lc3NhZ2VSZXBseRIPCgdtZXNz",
-            "YWdlGAEgASgJMkEKB01lc3NhZ2USNgoEU2VuZBIXLm1lc3NhZ2UuUmVxdWVz",
-            "dE1lc3NhZ2UaFS5tZXNzYWdlLk1lc3NhZ2VSZXBseUIUqgIRZ1JQQ19IVFRQ",
-            "M19DbGllbnRiBnByb3RvMw=="));
+            "ChRQcm90b3MvbWVzc2FnZS5wcm90bxIHbWVzc2FnZRofZ29vZ2xlL3Byb3Rv",
+            "YnVmL3RpbWVzdGFtcC5wcm90byJOCg5SZXF1ZXN0TWVzc2FnZRINCgVfZGF0",
+            "YRgBIAEoCRItCglfc2VuZFRpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wIkEKDE1lc3NhZ2VSZXBseRIxCg1fcmVjZWl2ZWRUaW1lGAEg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcDJBCgdNZXNzYWdlEjYK",
+            "BFNlbmQSFy5tZXNzYWdlLlJlcXVlc3RNZXNzYWdlGhUubWVzc2FnZS5NZXNz",
+            "YWdlUmVwbHlCFKoCEWdSUENfSFRUUDNfQ2xpZW50YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::gRPC_HTTP3_Client.RequestMessage), global::gRPC_HTTP3_Client.RequestMessage.Parser, new[]{ "Message" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::gRPC_HTTP3_Client.MessageReply), global::gRPC_HTTP3_Client.MessageReply.Parser, new[]{ "Message" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::gRPC_HTTP3_Client.RequestMessage), global::gRPC_HTTP3_Client.RequestMessage.Parser, new[]{ "Data", "SendTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::gRPC_HTTP3_Client.MessageReply), global::gRPC_HTTP3_Client.MessageReply.Parser, new[]{ "ReceivedTime" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Messages
-  /// <summary>
-  /// The request message containing the user's name.
-  /// </summary>
   public sealed partial class RequestMessage : pb::IMessage<RequestMessage>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -77,7 +76,8 @@ namespace gRPC_HTTP3_Client {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RequestMessage(RequestMessage other) : this() {
-      message_ = other.message_;
+      Data_ = other.Data_;
+      SendTime_ = other.SendTime_ != null ? other.SendTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,15 +87,27 @@ namespace gRPC_HTTP3_Client {
       return new RequestMessage(this);
     }
 
-    /// <summary>Field number for the "message" field.</summary>
-    public const int MessageFieldNumber = 1;
-    private string message_ = "";
+    /// <summary>Field number for the "_data" field.</summary>
+    public const int DataFieldNumber = 1;
+    private string Data_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Message {
-      get { return message_; }
+    public string Data {
+      get { return Data_; }
       set {
-        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        Data_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "_sendTime" field.</summary>
+    public const int SendTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp SendTime_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp SendTime {
+      get { return SendTime_; }
+      set {
+        SendTime_ = value;
       }
     }
 
@@ -114,7 +126,8 @@ namespace gRPC_HTTP3_Client {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Message != other.Message) return false;
+      if (Data != other.Data) return false;
+      if (!object.Equals(SendTime, other.SendTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -122,7 +135,8 @@ namespace gRPC_HTTP3_Client {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Message.Length != 0) hash ^= Message.GetHashCode();
+      if (Data.Length != 0) hash ^= Data.GetHashCode();
+      if (SendTime_ != null) hash ^= SendTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -141,9 +155,13 @@ namespace gRPC_HTTP3_Client {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Message.Length != 0) {
+      if (Data.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(Message);
+        output.WriteString(Data);
+      }
+      if (SendTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(SendTime);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -155,9 +173,13 @@ namespace gRPC_HTTP3_Client {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Message.Length != 0) {
+      if (Data.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(Message);
+        output.WriteString(Data);
+      }
+      if (SendTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(SendTime);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -169,8 +191,11 @@ namespace gRPC_HTTP3_Client {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Message.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+      if (Data.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Data);
+      }
+      if (SendTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SendTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -184,8 +209,14 @@ namespace gRPC_HTTP3_Client {
       if (other == null) {
         return;
       }
-      if (other.Message.Length != 0) {
-        Message = other.Message;
+      if (other.Data.Length != 0) {
+        Data = other.Data;
+      }
+      if (other.SendTime_ != null) {
+        if (SendTime_ == null) {
+          SendTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        SendTime.MergeFrom(other.SendTime);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -203,7 +234,14 @@ namespace gRPC_HTTP3_Client {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            Message = input.ReadString();
+            Data = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (SendTime_ == null) {
+              SendTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(SendTime);
             break;
           }
         }
@@ -222,7 +260,14 @@ namespace gRPC_HTTP3_Client {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            Message = input.ReadString();
+            Data = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (SendTime_ == null) {
+              SendTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(SendTime);
             break;
           }
         }
@@ -232,9 +277,6 @@ namespace gRPC_HTTP3_Client {
 
   }
 
-  /// <summary>
-  /// The response message containing the greetings.
-  /// </summary>
   public sealed partial class MessageReply : pb::IMessage<MessageReply>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -269,7 +311,7 @@ namespace gRPC_HTTP3_Client {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MessageReply(MessageReply other) : this() {
-      message_ = other.message_;
+      ReceivedTime_ = other.ReceivedTime_ != null ? other.ReceivedTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -279,15 +321,15 @@ namespace gRPC_HTTP3_Client {
       return new MessageReply(this);
     }
 
-    /// <summary>Field number for the "message" field.</summary>
-    public const int MessageFieldNumber = 1;
-    private string message_ = "";
+    /// <summary>Field number for the "_receivedTime" field.</summary>
+    public const int ReceivedTimeFieldNumber = 1;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp ReceivedTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Message {
-      get { return message_; }
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ReceivedTime {
+      get { return ReceivedTime_; }
       set {
-        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        ReceivedTime_ = value;
       }
     }
 
@@ -306,7 +348,7 @@ namespace gRPC_HTTP3_Client {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Message != other.Message) return false;
+      if (!object.Equals(ReceivedTime, other.ReceivedTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -314,7 +356,7 @@ namespace gRPC_HTTP3_Client {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Message.Length != 0) hash ^= Message.GetHashCode();
+      if (ReceivedTime_ != null) hash ^= ReceivedTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -333,9 +375,9 @@ namespace gRPC_HTTP3_Client {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Message.Length != 0) {
+      if (ReceivedTime_ != null) {
         output.WriteRawTag(10);
-        output.WriteString(Message);
+        output.WriteMessage(ReceivedTime);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -347,9 +389,9 @@ namespace gRPC_HTTP3_Client {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Message.Length != 0) {
+      if (ReceivedTime_ != null) {
         output.WriteRawTag(10);
-        output.WriteString(Message);
+        output.WriteMessage(ReceivedTime);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -361,8 +403,8 @@ namespace gRPC_HTTP3_Client {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Message.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+      if (ReceivedTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReceivedTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -376,8 +418,11 @@ namespace gRPC_HTTP3_Client {
       if (other == null) {
         return;
       }
-      if (other.Message.Length != 0) {
-        Message = other.Message;
+      if (other.ReceivedTime_ != null) {
+        if (ReceivedTime_ == null) {
+          ReceivedTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        ReceivedTime.MergeFrom(other.ReceivedTime);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -395,7 +440,10 @@ namespace gRPC_HTTP3_Client {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            Message = input.ReadString();
+            if (ReceivedTime_ == null) {
+              ReceivedTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ReceivedTime);
             break;
           }
         }
@@ -414,7 +462,10 @@ namespace gRPC_HTTP3_Client {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            Message = input.ReadString();
+            if (ReceivedTime_ == null) {
+              ReceivedTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ReceivedTime);
             break;
           }
         }
